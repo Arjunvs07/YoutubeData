@@ -9,3 +9,16 @@ import psycopg2                                           for manipulating data 
 import pandas as pd                                       for creating a dataframe
 import streamlit as st                                    for showing the output in streamlit
 ca = certifi.where()
+
+# API key Function
+
+def Api_connect():
+    api_key = "AIzaSyCosw7zu6NnBMBDfing20ocBFd2IvMc8uM"                            Here, with the help of API key obtained from the google developer console
+    api_service_name = "youtube"                                                   we are establishing a connection with the youtube.  
+    api_version = "v3"
+
+    youtube = build(api_service_name,api_version,developerKey=api_key)
+    
+    return youtube
+
+youtube = Api_connect()
